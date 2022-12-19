@@ -28,14 +28,8 @@ func main() {
 	api := router.Group("/api/v1")
 
 	api.POST("/users", userHandler.RegisterUser)
+	api.POST("/sessions",userHandler.Login)
+
 	router.Run()
-	 
-	// userInput := user.RegisterUserInput{}
-
-	// userInput.Name = "Staging1"
-	// userInput.Email = "staging@gmail.com"
-	// userInput.Occupation = "Admin"
-	// userInput.Password = "12341234"
-
-	// userService.RegisterUser((userInput))
+	  
 }
